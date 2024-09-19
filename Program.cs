@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using BOOK.classes;
 using BOOKWORM.classes;
 
@@ -100,7 +101,8 @@ class Program
                 Console.WriteLine($"Xush kelibsiz, {user.Name}!");
                 Console.WriteLine("1. Yangi kitob olish");
                 Console.WriteLine("2. Kitobni qaytarish");
-                Console.WriteLine("3. Chiqish");
+                Console.WriteLine("3. Kutubhonada qancha kitob bor?");
+                Console.WriteLine("4. Chiqish");
                 Console.Write("Raqamni tanlang: ");
 
                 int checkBook = int.Parse(Console.ReadLine());
@@ -114,7 +116,10 @@ class Program
                 returnBook(user);
                     break;
 
-                case 3:
+                case 3: 
+                AllTotal();
+                    break;
+                case 4:
                 return;
             }
             }
@@ -213,5 +218,14 @@ class Program
                 Console.WriteLine("Olingan kitoblar mavjud emas.");
             }
         }
+   }
+   static void AllTotal()
+   {
+    int allTotal = 0;
+      for (int i = 0; i < books.Count;  i++)
+      {
+        allTotal += books[i].Total;
+      }
+        Console.WriteLine($"Kutubhonadagi barcha kitoblar {allTotal}");
    }
 }

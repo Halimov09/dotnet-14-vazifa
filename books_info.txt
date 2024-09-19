@@ -1,3 +1,3 @@
-Gatsby, Classic, F. Scott Fitzgerald, 4
-1984, Dystopian, George Orwell, 9
-Mockingbird, Drama, Harper Lee, 7
+Gatsby, Classic, F. Scott Fitzgerald, 5 
+1984, Dystopian, George Orwell, 10 
+Mockingbird, Drama, Harper Lee, 7 

@@ -17,7 +17,9 @@ namespace BOOK.classes
 
         public override string ToString()
         {
-            return $"{Name}, {Genre}, {Author}, {Total}";
+            return $"{Name}, {Genre}, {Author}, {Total} ";
         }
+
+        
     }
 }
