@@ -10,9 +10,9 @@ class Program
     static List<Bookworm> bookworm = new List<Bookworm>();
     static List<Book> books = new List<Book>
     {
-        new Book("The Great Gatsby", "Classic", "F. Scott Fitzgerald", 5),
+        new Book("Gatsby", "Classic", "F. Scott Fitzgerald", 5),
         new Book("1984", "Dystopian", "George Orwell", 10),
-        new Book("To Kill a Mockingbird", "Drama", "Harper Lee", 7)
+        new Book("Mockingbird", "Drama", "Harper Lee", 7)
     };
 
     static void Main()
@@ -24,7 +24,8 @@ class Program
                 Console.WriteLine("1. Registratsiyadan o'tish");
                 Console.WriteLine("2. Kirish");
                 Console.WriteLine("3. Foydalanuvchilar");
-                Console.WriteLine("4. Chiqish");
+                Console.WriteLine("4. Kitoblarni kimlar oqimoqda");
+                Console.WriteLine("5. Chiqish");
                 Console.Write("Raqamni tanlang: ");
 
                 int tanlov;
@@ -49,7 +50,11 @@ class Program
                         break;
 
                     case 4:
-                        return; 
+                        showReader();
+                        break;
+
+                    case 5: 
+                        return;
 
                     default:
                         Console.WriteLine("Noto'g'ri tanlov.");
@@ -126,18 +131,6 @@ class Program
         foreach (var user in bookworm)
         {
             Console.WriteLine($"Foydalanuvchi: {user.Name}");
-            if (user.BorrowedBooks.Any())
-            {
-                Console.WriteLine("Olingan kitoblar:");
-                foreach (var book in user.BorrowedBooks)
-                {
-                    Console.WriteLine($"- {book.Name} ({book.Total - (book.Total - 1)})");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Olingan kitoblar mavjud emas.");
-            }
         }
     }
 
@@ -199,6 +192,26 @@ class Program
         else
         {
             Console.WriteLine($"{nameBook} kitobi topilmadi.");
+        }
+   }
+
+   static void showReader()
+   {
+       foreach (var user in bookworm)
+        {
+            Console.WriteLine($"Foydalanuvchi: {user.Name}");
+            if (user.BorrowedBooks.Any())
+            {
+                Console.WriteLine("Olingan kitoblar:");
+                foreach (var book in user.BorrowedBooks)
+                {
+                    Console.WriteLine($"- {book.Name} ({book.Total - (book.Total - 1)})");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Olingan kitoblar mavjud emas.");
+            }
         }
    }
 }
