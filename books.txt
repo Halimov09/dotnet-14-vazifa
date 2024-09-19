@@ -1,0 +1,15 @@
+Id: f16983c9-7891-4342-89c0-1c632488a8ac
+Name: F. Scott Fitzgerald
+Genre: historic
+Autor: Fiction
+TotalThinks: 3
+Id: 8b06b9db-93e5-4a4a-b632-829ca8b07020
+Name: Harper Lee
+Genre: historic
+Autor: Fiction
+TotalThinks: 3
+Id: 5de7fddd-adcc-4873-a867-fde579998eab
+Name: George Orwell
+Genre: historic
+Autor: Dystopian
+TotalThinks: 3
